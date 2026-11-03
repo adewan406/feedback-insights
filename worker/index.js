@@ -5,7 +5,8 @@ import * as db from "./db.js";
 
 export { FeedbackPipeline } from "./pipeline.js"; // the automation (Cloudflare Workflow)
 
-const MAX_ITEMS = 300; // per batch, keeps the free AI quota safe
+const MAX_ITEMS = 300; // per batch, keeps AI costs safe
+const DEFAULT_DAILY_RUN_LIMIT = 20; // uploads + re-runs per day (override with DAILY_RUN_LIMIT)
 
 export default {
   async fetch(request, env, ctx) {
@@ -13,6 +14,12 @@ export default {
     const route = `${request.method} ${url.pathname}`;
     // Anyone can view the dashboard; anything that costs AI, Snowflake or email needs the demo passcode.
     if (request.method === "POST" && !passcodeOk(request, env)) {
+      // Slow down guessing: a few wrong passcodes per minute per visitor, then a short lockout.
+      if (env.PASSCODE_LIMITER && request.headers.get("x-app-passcode")) {
+        const ip = request.headers.get("cf-connecting-ip") || "unknown";
+        const { success } = await env.PASSCODE_LIMITER.limit({ key: ip });
+        if (!success) return json({ error: "Too many wrong passcodes. Wait a minute and try again." }, 429);
+      }
       return json({ error: "Passcode required", needsPasscode: true }, 401);
     }
     try {
@@ -24,20 +31,28 @@ export default {
         await db.markAllRead(env);
         return json({ ok: true });
       }
-      if (route === "POST /api/analyze") return analyze(request, env, ctx);
+      // Direct agent runs skip the daily cap, so they're for local testing only.
+      if (route === "POST /api/analyze" && env.ALLOW_DIRECT_ANALYZE === "true") return analyze(request, env, ctx);
       if (route === "GET /api/health") return health(env);
     } catch (err) {
-      console.error(err);
-      return json({ error: err.message || "Server error" }, 500);
+      console.error(err); // full details stay in the Cloudflare logs
+      return json({ error: "Something went wrong on the server. Try again in a minute." }, 500);
     }
     return json({ error: "Not found" }, 404);
   },
 };
 
 function passcodeOk(request, env) {
-  if (!env.APP_PASSCODE) return true; // not set (local dev): open
+  if (!env.APP_PASSCODE) return false; // not configured: block everything that costs money
   return request.headers.get("x-app-passcode") === env.APP_PASSCODE;
 }
+
+// A simple daily cap on automation runs (each upload or re-run is one run).
+async function underDailyCap(env) {
+  const limit = Number(env.DAILY_RUN_LIMIT) || DEFAULT_DAILY_RUN_LIMIT;
+  return (await db.runsToday(env)) < limit;
+}
+const capReached = () => json({ error: "Today's limit of AI runs is reached. Try again tomorrow." }, 429);
 
 const newId = (prefix) => `${prefix}_${Date.now().toString(36)}_${crypto.randomUUID().slice(0, 6)}`;
 
@@ -48,6 +63,7 @@ async function upload(request, env) {
   const rows = clean(body.rows);
   if (!rows.length) return json({ error: "No feedback to upload." }, 400);
   if (rows.length > MAX_ITEMS) return json({ error: `Max ${MAX_ITEMS} pieces of feedback per upload.` }, 400);
+  if (!(await underDailyCap(env))) return capReached();
 
   // Feedback ids must be unique across uploads, or labels from last month get mixed up with this month.
   const [latest] = await db.latestUploads(env, 1);
@@ -70,6 +86,7 @@ async function upload(request, env) {
 async function rerun(request, env) {
   const { uploadId } = await request.json().catch(() => ({}));
   if (!uploadId) return json({ error: "uploadId is required" }, 400);
+  if (!(await underDailyCap(env))) return capReached();
   const runId = newId("run");
   await env.PIPELINE.create({ id: runId, params: { runId, uploadId } });
   return json({ uploadId, runId }, 202);
@@ -88,7 +105,7 @@ async function runStatus(env, runId) {
     runId,
     workflow,
     stage, // saving_raw → analyzing → notifying → done | failed
-    error: run?.ERROR || (workflow === "errored" ? instance?.error?.message || "The automation failed." : null),
+    error: run?.ERROR || (workflow === "errored" ? "The automation failed. Check the Cloudflare logs for details." : null),
     progress: run?.REPORT?.progress || run?.REPORT?.steps || [],
   });
 }
@@ -158,15 +175,14 @@ async function analyze(request, env, ctx) {
   });
 }
 
-// Checks the Snowflake login works and the tables exist.
+// Public health check: says only whether the database answers. No user, role or table names.
 async function health(env) {
   try {
-    const [who] = await select(env, "SELECT CURRENT_USER() AS USER_NAME, CURRENT_ROLE() AS ROLE_NAME, CURRENT_DATABASE() AS DB");
-    const tables = await select(env,
-      "SELECT TABLE_NAME FROM FEEDBACK_INSIGHTS.INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'APP' ORDER BY TABLE_NAME");
-    return json({ snowflake: "connected", ...who, tables: tables.map((t) => t.TABLE_NAME) });
+    await select(env, "SELECT 1 AS OK");
+    return json({ ok: true, database: "connected" });
   } catch (err) {
-    return json({ snowflake: "error", detail: err.message }, 502);
+    console.error("health check failed", err);
+    return json({ ok: false, database: "error" }, 503);
   }
 }
 

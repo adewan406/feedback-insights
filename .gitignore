@@ -9,7 +9,7 @@ secrets/
 *.p8
 *.pem
 *.key
-*passcode*
+secrets/app_passcode.txt
 
 # --- Build output and tools ---
 node_modules/

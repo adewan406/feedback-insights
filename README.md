@@ -42,8 +42,15 @@ Each step is saved when it finishes and retries on its own if it fails. If a run
 Snowflake is both the database and the AI engine:
 
 - **Tables** (`setup.sql`): `UPLOADS`, `FEEDBACK_RAW`, `AGENT_RUNS` (each report as JSON), `FEEDBACK_LABELS` (reused next month, which roughly halves AI cost) and `NOTIFICATIONS`
-- **Cortex** runs the LLM (`SNOWFLAKE.CORTEX.COMPLETE`), so feedback stays in Snowflake
+- **Cortex** runs the LLM (`SNOWFLAKE.CORTEX.COMPLETE`), so the app needs no separate AI provider key
 - The app logs in as a **service user with key-pair auth**, and its role can only read and write these 5 tables
+
+## Security and data flow
+
+- **Where data goes:** feedback is stored in Snowflake and processed by Claude through Snowflake Cortex. Cross-region processing is enabled (`ANY_REGION`), so it can be processed outside the account's region. The app runs on Cloudflare. Report emails, including quotes from urgent tickets, are sent through Resend, a third party.
+- **What the agent can do:** it writes a report and labels. It can't refund, reply to customers or change other systems, but its report **automatically triggers dashboard alerts and an email**, so a wrong or manipulated report can cause a wrong alert. A human should review reports before acting.
+- **Protections:** every action that costs money needs a demo passcode (if no passcode is configured, uploads are blocked). There's a daily cap on AI runs (`DAILY_RUN_LIMIT`), at most 5 wrong passcode attempts per visitor per minute, and error messages and the public health check don't reveal database details. Secrets live in Cloudflare secrets and `.dev.vars`, never in the repo.
+- **Known gaps:** see [`docs/security-review.md`](docs/security-review.md).
 
 ## Testing
 
@@ -72,6 +79,8 @@ You need Node.js, a Cloudflare account (with `wrangler` logged in), a Snowflake 
 3. **Local secrets:** create `.dev.vars` (it's git-ignored):
    ```
    SNOWFLAKE_PRIVATE_KEY="<private key body>"
+   APP_PASSCODE="<pick one>"
+   ALLOW_DIRECT_ANALYZE="true"   # local only: lets scripts/run_agent.mjs call the agent directly
    RESEND_API_KEY="<optional>"
    NOTIFY_EMAIL="<optional>"
    ```

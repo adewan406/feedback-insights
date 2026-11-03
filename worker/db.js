@@ -68,6 +68,12 @@ export async function saveProgress(env, runId, steps) {
   ]);
 }
 
+// Runs started today (Snowflake account time zone), for the daily cap.
+export async function runsToday(env) {
+  const [row] = await select(env, "SELECT COUNT(*) AS N FROM AGENT_RUNS WHERE CREATED_AT >= DATE_TRUNC('day', CURRENT_TIMESTAMP())");
+  return Number(row.N);
+}
+
 export async function setRunStatus(env, runId, status, error = null) {
   await query(env, "UPDATE AGENT_RUNS SET STATUS = ?, ERROR = ? WHERE RUN_ID = ?", [status, error, runId]);
 }

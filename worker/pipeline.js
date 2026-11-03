@@ -60,7 +60,10 @@ export class FeedbackPipeline extends WorkflowEntrypoint {
       }
       await step.do("Mark run done", RETRY, () => db.setRunStatus(env, runId, "done"));
     } catch (err) {
-      const reason = String(err.message || err).replace(/^\w*Error:\s*/, "");
+      console.error("pipeline failed", err); // full details stay in the Cloudflare logs
+      const raw = String(err.message || err).replace(/^\w*Error:\s*/, "");
+      // Database/AI errors can contain account or SQL details: show a plain message instead.
+      const reason = /snowflake|sql|jwt|statement|cortex/i.test(raw) ? "A database or AI step failed." : raw;
       // Make the failure visible on the dashboard instead of failing silently.
       await step.do("Record failure", RETRY, async () => {
         await db.setRunStatus(env, runId, "failed", reason.slice(0, 500));

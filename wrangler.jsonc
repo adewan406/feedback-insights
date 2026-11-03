@@ -9,7 +9,9 @@
     "run_worker_first": ["/api/*"]
   },
   // The automation: upload → save raw → run agent + save → notify. See worker/pipeline.js.
-  "workflows": [{ "name": "feedback-pipeline", "binding": "PIPELINE", "class_name": "FeedbackPipeline" }],
+  // At most 5 wrong passcode attempts per visitor per minute.
+  "ratelimits": [{ "name": "PASSCODE_LIMITER", "namespace_id": "1001", "simple": { "limit": 5, "period": 60 } }],
+    "workflows": [{ "name": "feedback-pipeline", "binding": "PIPELINE", "class_name": "FeedbackPipeline" }],
   // Not secret: who we log in to Snowflake as and where. The private key is stored separately as a secret.
   "vars": {
     "SNOWFLAKE_ACCOUNT": "UEYUIYB-DA50020",
@@ -20,6 +22,7 @@
     "SNOWFLAKE_SCHEMA": "APP",
     "SNOWFLAKE_PUBLIC_KEY_FP": "7THWVQBKW1wd3AD1zsGbGN8Z82WWJIBQgwhk7ocUe3U=",
     "AI_MODEL": "claude-sonnet-4-5",
+    "DAILY_RUN_LIMIT": "20",
     "APP_URL": "https://feedback-insights.snowflake-site.workers.dev"
   }
 }
