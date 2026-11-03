@@ -1,0 +1,25 @@
+{
+  "name": "feedback-insights",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-01",
+  // The built React site. /api/* always goes to the Worker; everything else is a static file.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  // The automation: upload → save raw → run agent + save → notify. See worker/pipeline.js.
+  "workflows": [{ "name": "feedback-pipeline", "binding": "PIPELINE", "class_name": "FeedbackPipeline" }],
+  // Not secret: who we log in to Snowflake as and where. The private key is stored separately as a secret.
+  "vars": {
+    "SNOWFLAKE_ACCOUNT": "UEYUIYB-DA50020",
+    "SNOWFLAKE_USER": "FEEDBACK_API",
+    "SNOWFLAKE_ROLE": "FEEDBACK_APP_RW",
+    "SNOWFLAKE_WAREHOUSE": "SNOWFLAKE_LEARNING_WH",
+    "SNOWFLAKE_DATABASE": "FEEDBACK_INSIGHTS",
+    "SNOWFLAKE_SCHEMA": "APP",
+    "SNOWFLAKE_PUBLIC_KEY_FP": "7THWVQBKW1wd3AD1zsGbGN8Z82WWJIBQgwhk7ocUe3U=",
+    "AI_MODEL": "claude-sonnet-4-5",
+    "APP_URL": "https://feedback-insights.snowflake-site.workers.dev"
+  }
+}

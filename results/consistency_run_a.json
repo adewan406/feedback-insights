@@ -1,0 +1,722 @@
+{
+  "model": "claude-sonnet-4-5",
+  "tokens": {
+    "input": 23044,
+    "output": 8937,
+    "calls": 11
+  },
+  "createdAt": "2026-10-29T03:43:57.310Z",
+  "seconds": 59,
+  "insight": "Rating Screen Bugs jumped from 0 to 13 complaints after the 5.2 update, while Order Tracking Inaccurate fell from 14 to 4.",
+  "priorities": [
+    {
+      "theme": "rating_screen_bugs",
+      "name": "Rating Screen Bugs",
+      "score": 58.5,
+      "impact": 3,
+      "impactFlags": [
+        "blocks_ordering"
+      ],
+      "trend": "new",
+      "why": "13 customers report the rating popup appears repeatedly, blocks cart access, and prevents ordering after the 5.2 update.",
+      "fix": "Roll back the 5.2 rating popup changes immediately and audit the dismiss/completion logic to prevent re-showing rated orders.",
+      "evidence": [
+        "B2-015",
+        "B2-024",
+        "B2-021"
+      ]
+    },
+    {
+      "theme": "checkout_payment_issues",
+      "name": "Checkout and Payment Issues",
+      "score": 27,
+      "impact": 3,
+      "impactFlags": [
+        "blocks_ordering",
+        "loses_money"
+      ],
+      "trend": "stable",
+      "why": "9 customers experienced checkout problems including crashes, double charges, and failed payments that still withdrew money.",
+      "fix": "Investigate payment gateway logs for double-charge incidents (starting with order #60331) and implement idempotency keys to prevent duplicate charges.",
+      "evidence": [
+        "B2-010",
+        "B2-006",
+        "B2-001"
+      ]
+    },
+    {
+      "theme": "late_cold_food",
+      "name": "Late Deliveries and Cold Food",
+      "score": 16,
+      "impact": 2,
+      "impactFlags": [
+        "ruins_order"
+      ],
+      "trend": "stable",
+      "why": "8 customers received cold food with delivery times exceeding 60-70 minutes, ruining their orders.",
+      "fix": "Analyze delivery time data for orders exceeding ETA by 30+ minutes to identify driver assignment or routing bottlenecks.",
+      "evidence": [
+        "B2-007",
+        "B2-027",
+        "B2-009"
+      ]
+    }
+  ],
+  "summary": "This month we received 60 feedback items, stable from last month. A new critical issue emerged: Rating Screen Bugs (13 complaints, all negative) is blocking customers from accessing their carts and ordering after the 5.2 update. Checkout and Payment Issues remain stable at 9 complaints with continued double-charging reports. Positive movement: Order Tracking Inaccurate is improving (14→4) and Promo Codes Not Working is improving (10→3). Note: A separate urgent item (B2-042) involves a life-threatening allergic reaction due to special instructions not reaching restaurants.",
+  "urgent": [
+    {
+      "action": "Immediately investigate why special instructions failed to reach the restaurant and implement emergency protocol to verify all active orders with allergy notes are properly communicated.",
+      "id": "B2-042",
+      "reason": "Critical system failure caused a severe allergic reaction requiring emergency medication, indicating special instruction notes are not being transmitted to restaurants, creating immediate life-threatening risk for other customers with allergies.",
+      "urgent": true,
+      "text": "I wrote 'severe peanut allergy - no peanuts please' in the order notes for my Thai order. The restaurant told me afterward they never saw any notes. My daughter had an allergic reaction and we had to use her EpiPen. Your special instructions are not reaching restaurants. This could kill someone."
+    }
+  ],
+  "themes": [
+    {
+      "description": "Tracking shows wrong status, incorrect driver location, frozen map, inaccurate ETAs, or delayed status updates.",
+      "id": "order_tracking_inaccurate",
+      "name": "Order Tracking Inaccurate",
+      "thisMonth": 4,
+      "lastMonth": 14,
+      "negativeThisMonth": 1,
+      "trend": "improving",
+      "score": 12
+    },
+    {
+      "description": "Checkout crashes, freezes, timeouts, payment failures, double charges, address re-entry required, Apple Pay/Google Pay/PayPal errors, invalid card form errors, and confusing payment flows.",
+      "id": "checkout_payment_issues",
+      "name": "Checkout and Payment Issues",
+      "thisMonth": 9,
+      "lastMonth": 11,
+      "negativeThisMonth": 5,
+      "trend": "stable",
+      "score": 27
+    },
+    {
+      "description": "Promo codes rejected, not applying discount, disappearing at checkout, expired immediately, or hidden eligibility rules.",
+      "id": "promo_codes_not_working",
+      "name": "Promo Codes Not Working",
+      "thisMonth": 3,
+      "lastMonth": 10,
+      "negativeThisMonth": 2,
+      "trend": "improving",
+      "score": 3
+    },
+    {
+      "description": "Rating popup appears repeatedly, won't close, blocks the screen, freezes the app, stars don't respond, or saves wrong rating.",
+      "id": "rating_screen_bugs",
+      "name": "Rating Screen Bugs",
+      "thisMonth": 13,
+      "lastMonth": 0,
+      "negativeThisMonth": 13,
+      "trend": "new",
+      "score": 58.5
+    },
+    {
+      "description": "Food arrives late, cold, lukewarm, or soggy due to delivery delays or multiple stops.",
+      "id": "late_cold_food",
+      "name": "Late Deliveries and Cold Food",
+      "thisMonth": 8,
+      "lastMonth": 8,
+      "negativeThisMonth": 7,
+      "trend": "stable",
+      "score": 16
+    },
+    {
+      "description": "Orders missing items, wrong items delivered, wrong entire order, or special instructions ignored.",
+      "id": "missing_wrong_items",
+      "name": "Missing or Wrong Items",
+      "thisMonth": 5,
+      "lastMonth": 5,
+      "negativeThisMonth": 5,
+      "trend": "stable",
+      "score": 10
+    },
+    {
+      "description": "Critical order notes including allergy warnings not reaching restaurants, creating safety risks.",
+      "id": "special_instructions_not_delivered",
+      "name": "Special Instructions Not Delivered",
+      "thisMonth": 2,
+      "lastMonth": 1,
+      "negativeThisMonth": 2,
+      "trend": "worsening",
+      "score": 6
+    },
+    {
+      "description": "Service fees or charges only visible on final checkout screen, feeling deceptive to users.",
+      "id": "hidden_fees",
+      "name": "Hidden Fees",
+      "thisMonth": 1,
+      "lastMonth": 1,
+      "negativeThisMonth": 1,
+      "trend": "stable",
+      "score": 1
+    },
+    {
+      "description": "Positive feedback about the app, drivers, speed, features, restaurant selection, or overall experience.",
+      "id": "praise",
+      "name": "Praise",
+      "thisMonth": 9,
+      "lastMonth": 8,
+      "negativeThisMonth": 0,
+      "trend": "stable",
+      "score": 0
+    },
+    {
+      "description": "Feature requests, account questions, spam, or feedback that doesn't describe a specific problem.",
+      "id": "other",
+      "name": "Other",
+      "thisMonth": 6,
+      "lastMonth": 2,
+      "negativeThisMonth": 1,
+      "trend": "worsening",
+      "score": 0
+    }
+  ],
+  "reusedLabels": 0,
+  "currentIds": [
+    "B2-001",
+    "B2-002",
+    "B2-003",
+    "B2-004",
+    "B2-005",
+    "B2-006",
+    "B2-007",
+    "B2-008",
+    "B2-009",
+    "B2-010",
+    "B2-011",
+    "B2-012",
+    "B2-013",
+    "B2-014",
+    "B2-015",
+    "B2-016",
+    "B2-017",
+    "B2-018",
+    "B2-019",
+    "B2-020",
+    "B2-021",
+    "B2-022",
+    "B2-023",
+    "B2-024",
+    "B2-025",
+    "B2-026",
+    "B2-027",
+    "B2-028",
+    "B2-029",
+    "B2-030",
+    "B2-031",
+    "B2-032",
+    "B2-033",
+    "B2-034",
+    "B2-035",
+    "B2-036",
+    "B2-037",
+    "B2-038",
+    "B2-039",
+    "B2-040",
+    "B2-041",
+    "B2-042",
+    "B2-043",
+    "B2-044",
+    "B2-045",
+    "B2-046",
+    "B2-047",
+    "B2-048",
+    "B2-049",
+    "B2-050",
+    "B2-051",
+    "B2-052",
+    "B2-053",
+    "B2-054",
+    "B2-055",
+    "B2-056",
+    "B2-057",
+    "B2-058",
+    "B2-059",
+    "B2-060"
+  ],
+  "labels": {
+    "B1-001": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-002": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-003": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-004": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-005": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-006": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-007": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-008": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-009": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-010": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-011": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-012": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-013": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-014": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B1-015": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-016": {
+      "theme": "hidden_fees",
+      "sentiment": "negative"
+    },
+    "B1-017": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-018": {
+      "theme": "special_instructions_not_delivered",
+      "sentiment": "negative"
+    },
+    "B1-019": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-020": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-021": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-022": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "neutral"
+    },
+    "B1-023": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-024": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-025": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B1-026": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-027": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B1-028": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B1-029": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-030": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-031": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-032": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-033": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-034": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-035": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-036": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-037": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-038": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "neutral"
+    },
+    "B1-039": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-040": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-041": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "neutral"
+    },
+    "B1-042": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B1-043": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-044": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-045": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "neutral"
+    },
+    "B1-046": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-047": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-048": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B1-049": {
+      "theme": "late_cold_food",
+      "sentiment": "neutral"
+    },
+    "B1-050": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-051": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-052": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B1-053": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-054": {
+      "theme": "missing_wrong_items",
+      "sentiment": "neutral"
+    },
+    "B1-055": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-056": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-057": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-058": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B1-059": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-060": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B2-001": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "neutral"
+    },
+    "B2-002": {
+      "theme": "other",
+      "sentiment": "positive"
+    },
+    "B2-003": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "neutral"
+    },
+    "B2-004": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B2-005": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "negative"
+    },
+    "B2-006": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B2-007": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-008": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "neutral"
+    },
+    "B2-009": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-010": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B2-011": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "neutral"
+    },
+    "B2-012": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B2-013": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-014": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B2-015": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-016": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "neutral"
+    },
+    "B2-017": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B2-018": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "positive"
+    },
+    "B2-019": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-020": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-021": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-022": {
+      "theme": "hidden_fees",
+      "sentiment": "negative"
+    },
+    "B2-023": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "positive"
+    },
+    "B2-024": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-025": {
+      "theme": "order_tracking_inaccurate",
+      "sentiment": "neutral"
+    },
+    "B2-026": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-027": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-028": {
+      "theme": "late_cold_food",
+      "sentiment": "neutral"
+    },
+    "B2-029": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-030": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-031": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B2-032": {
+      "theme": "promo_codes_not_working",
+      "sentiment": "negative"
+    },
+    "B2-033": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-034": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-035": {
+      "theme": "other",
+      "sentiment": "negative"
+    },
+    "B2-036": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-037": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-038": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-039": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-040": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-041": {
+      "theme": "special_instructions_not_delivered",
+      "sentiment": "negative"
+    },
+    "B2-042": {
+      "theme": "special_instructions_not_delivered",
+      "sentiment": "negative"
+    },
+    "B2-043": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-044": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-045": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B2-046": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B2-047": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B2-048": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-049": {
+      "theme": "missing_wrong_items",
+      "sentiment": "negative"
+    },
+    "B2-050": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-051": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-052": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-053": {
+      "theme": "checkout_payment_issues",
+      "sentiment": "negative"
+    },
+    "B2-054": {
+      "theme": "other",
+      "sentiment": "positive"
+    },
+    "B2-055": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B2-056": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-057": {
+      "theme": "rating_screen_bugs",
+      "sentiment": "negative"
+    },
+    "B2-058": {
+      "theme": "late_cold_food",
+      "sentiment": "negative"
+    },
+    "B2-059": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-060": {
+      "theme": "other",
+      "sentiment": "neutral"
+    }
+  }
+}

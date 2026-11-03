@@ -1,0 +1,20 @@
+# --- Secrets: never commit ---
+# Local Worker secrets (Snowflake private key, Resend key, notify email)
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+# Key pair + demo passcode
+secrets/
+*.p8
+*.pem
+*.key
+*passcode*
+
+# --- Build output and tools ---
+node_modules/
+dist/
+.wrangler/
+
+# --- macOS ---
+.DS_Store

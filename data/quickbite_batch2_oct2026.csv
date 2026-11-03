@@ -1,0 +1,61 @@
+id,date,source,text,star_rating
+B2-001,2026-10-02,app_store,"Place Order button still crashes sometimes, not as bad as before though.",3
+B2-002,2026-10-02,app_store,Would love to be able to schedule orders a week ahead.,4
+B2-003,2026-10-03,survey,Checkout is a little faster now but still asks for my address every time.,3
+B2-004,2026-10-03,google_play,"Wrong drink. Ordered Diet Coke, got Sprite.",3
+B2-005,2026-10-03,support,Tracking showed delivered but the driver was still 5 minutes away.,
+B2-006,2026-10-04,app_store,Checkout timed out while I was picking a tip and I lost my whole cart.,2
+B2-007,2026-10-06,google_play,Burger was cold and the bun was soggy. Took 70 minutes.,1
+B2-008,2026-10-06,google_play,"The 20% off code applied this time, but only to the subtotal, not delivery. Fine I guess.",3
+B2-009,2026-10-07,google_play,Nothing says 'fresh' like room temperature sushi after an hour 😂,2
+B2-010,2026-10-08,support,"Payment says failed but money left my account. Order #60331, $27.80.",
+B2-011,2026-10-08,google_play,"Card got declined for no reason, worked fine on the second try.",3
+B2-012,2026-10-08,app_store,Promo code didn't work at checkout.,2
+B2-013,2026-10-08,app_store,"Driver went above and beyond, walked it up 4 flights of stairs.",5
+B2-014,2026-10-08,google_play,asdfgh,1
+B2-015,2026-10-09,app_store,"Since the last update the 'Rate your order' popup shows up every time I open the app, even for orders I already rated.",2
+B2-016,2026-10-09,google_play,Food from Taco Loco was amazing but paying took 3 attempts.,3
+B2-017,2026-10-09,google_play,"No utensils, no napkins, no sauce. Again.",2
+B2-018,2026-10-09,google_play,"Driver icon jumped around the map, but food came on time.",4
+B2-019,2026-10-09,app_store,"Order tracking is SO much better now, I can actually see the driver move!",5
+B2-020,2026-10-10,app_store,Update 5.2 broke the ratings page. Submit button does nothing.,2
+B2-021,2026-10-10,google_play,"The food is still great, but the rating popup makes me not want to open the app.",3
+B2-022,2026-10-10,app_store,Service fee still hidden until the last screen.,2
+B2-023,2026-10-10,google_play,"ETA was off by about 15 minutes, but better than it used to be.",3
+B2-024,2026-10-11,support,The rating popup is blocking my whole screen and I can't get to my cart. I've rated the order 3 times. Please fix.,
+B2-025,2026-10-11,app_store,Map froze once near the end of the delivery.,3
+B2-026,2026-10-11,survey,"Good selection, fair prices on the weekday deals.",4
+B2-027,2026-10-12,support,My order arrived 1 hour 10 minutes after the estimated time. Food was cold. Requesting a refund.,
+B2-028,2026-10-12,app_store,"Late again, but at least the tracking told me it would be late this time.",3
+B2-029,2026-10-12,app_store,"Driver went to the wrong building first, food was cold by the time I got it.",2
+B2-030,2026-10-12,survey,"Tracking is mostly accurate now, occasionally stuck.",3
+B2-031,2026-10-13,support,"Hi, I was billed for an order I cancelled within 1 minute. Please refund $19.40.",
+B2-032,2026-10-13,google_play,Loyalty points promo expired before I could use it.,2
+B2-033,2026-10-14,app_store,Rating stars don't respond to taps on my iPhone 15.,2
+B2-034,2026-10-15,app_store,"45 min late, cold noodles.",1
+B2-035,2026-10-15,support,My referral credit never showed up in my account.,
+B2-036,2026-10-17,survey,The new rating prompt is really annoying. It pops up constantly.,2
+B2-037,2026-10-18,survey,"Great app, I use it 3 times a week.",5
+B2-038,2026-10-19,app_store,App freezes on the 'How was your order?' screen. Have to force quit.,1
+B2-039,2026-10-20,google_play,I rated my driver 5 stars and the app saved it as 1 star?? Poor guy.,2
+B2-040,2026-10-21,google_play,Friday dinner deliveries are always slow.,2
+B2-041,2026-10-21,survey,"Usually correct, but special instructions get ignored a lot.",3
+B2-042,2026-10-21,support,I wrote 'severe peanut allergy - no peanuts please' in the order notes for my Thai order. The restaurant told me afterward they never saw any notes. My daughter had an allergic reaction and we had to use her EpiPen. Your special instructions are not reaching restaurants. This could kill someone.,
+B2-043,2026-10-21,app_store,Promo worked! First time in months. Saved $8.,4
+B2-044,2026-10-22,google_play,Rating screen won't close. I tap X and it comes right back.,1
+B2-045,2026-10-22,google_play,Charged twice again for a single order.,1
+B2-046,2026-10-22,app_store,Missing one of my two entrees.,2
+B2-047,2026-10-22,app_store,Received the wrong order completely.,1
+B2-048,2026-10-22,google_play,Reorder button is the best feature.,5
+B2-049,2026-10-23,support,Order #61842 was missing a large fries and a drink. Please refund.,
+B2-050,2026-10-23,google_play,"Super fast delivery tonight, 20 minutes!",5
+B2-051,2026-10-25,app_store,Can't place a new order because the rate-your-driver screen is stuck on top of everything.,1
+B2-052,2026-10-25,app_store,"Love being asked to rate the same pad thai from 2 weeks ago every single time I open the app. Truly, 5 stars.",5
+B2-053,2026-10-25,google_play,"Apple Pay works now apparently, but Google Pay just shows an error.",2
+B2-054,2026-10-25,google_play,Please add a dark mode!,4
+B2-055,2026-10-25,support,How do I delete my account?,
+B2-056,2026-10-26,support,I was charged a $5 tip I never selected. It happened on the rating screen after my order. Please refund.,
+B2-057,2026-10-27,google_play,The tip screen after rating keeps adding a tip I didn't choose.,1
+B2-058,2026-10-27,survey,Food often arrives lukewarm.,2
+B2-059,2026-10-27,app_store,Easy to use and reliable.,4
+B2-060,2026-10-27,survey,Is there a student discount?,4

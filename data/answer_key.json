@@ -1,0 +1,358 @@
+{
+  "themes": [
+    {
+      "theme": "rating_screen_bug",
+      "label": "Rating & tip screen bug (after app update 5.2)",
+      "batch1_count": 0,
+      "batch2_count": 13,
+      "trend": "new"
+    },
+    {
+      "theme": "checkout_payment",
+      "label": "Checkout & payment failures",
+      "batch1_count": 12,
+      "batch2_count": 10,
+      "trend": "stable"
+    },
+    {
+      "theme": "late_cold",
+      "label": "Late or cold deliveries",
+      "batch1_count": 8,
+      "batch2_count": 8,
+      "trend": "stable"
+    },
+    {
+      "theme": "missing_wrong",
+      "label": "Missing or wrong items",
+      "batch1_count": 6,
+      "batch2_count": 6,
+      "trend": "stable"
+    },
+    {
+      "theme": "order_tracking",
+      "label": "Inaccurate order tracking / ETA",
+      "batch1_count": 14,
+      "batch2_count": 5,
+      "trend": "improved"
+    },
+    {
+      "theme": "promo_codes",
+      "label": "Promo codes not applying",
+      "batch1_count": 10,
+      "batch2_count": 4,
+      "trend": "improved"
+    },
+    {
+      "theme": "food_allergy",
+      "label": "Food allergy / special instructions not reaching restaurant",
+      "batch1_count": 0,
+      "batch2_count": 1,
+      "trend": "new"
+    },
+    {
+      "theme": "praise",
+      "label": "Praise (no problem)",
+      "batch1_count": 8,
+      "batch2_count": 8,
+      "trend": "stable"
+    },
+    {
+      "theme": "other",
+      "label": "Other (feature requests, account questions, junk)",
+      "batch1_count": 2,
+      "batch2_count": 5,
+      "trend": "worse"
+    }
+  ],
+  "top3_this_month": [
+    "rating_screen_bug",
+    "checkout_payment",
+    "late_cold"
+  ],
+  "top3_last_month": [
+    "order_tracking",
+    "checkout_payment",
+    "promo_codes"
+  ],
+  "new_problem": "rating_screen_bug",
+  "improved": [
+    "order_tracking",
+    "promo_codes"
+  ],
+  "urgent_flag": {
+    "theme": "food_allergy",
+    "id": "B2-042",
+    "why": "Safety risk: allergy notes in special instructions never reach the restaurant. One report, but must be escalated immediately regardless of volume."
+  },
+  "tricky_cases": [
+    {
+      "id": "B1-003",
+      "tag": "mixed",
+      "true_theme": "checkout_payment",
+      "stars": 3,
+      "text": "Food was great as always, but checkout froze twice before it went through."
+    },
+    {
+      "id": "B1-018",
+      "tag": "special_instructions_signal",
+      "true_theme": "missing_wrong",
+      "stars": 2,
+      "text": "Asked for no onions in the instructions, got extra onions."
+    },
+    {
+      "id": "B1-019",
+      "tag": "sarcasm",
+      "true_theme": "order_tracking",
+      "stars": 3,
+      "text": "Oh great, the live map is 'live' the way a painting is live. Love it."
+    },
+    {
+      "id": "B1-034",
+      "tag": "sarcasm_high_stars",
+      "true_theme": "late_cold",
+      "stars": 4,
+      "text": "Thanks QuickBite for teaching me patience. 75 minutes for a burrito 👏"
+    },
+    {
+      "id": "B1-037",
+      "tag": "sarcasm_high_stars",
+      "true_theme": "order_tracking",
+      "stars": 5,
+      "text": "5 stars for the order tracking, it's a great work of fiction 🙃"
+    },
+    {
+      "id": "B1-038",
+      "tag": "mixed",
+      "true_theme": "checkout_payment",
+      "stars": 3,
+      "text": "Love the restaurant selection. Paying is the annoying part, PayPal never works."
+    },
+    {
+      "id": "B1-039",
+      "tag": "sarcasm",
+      "true_theme": "promo_codes",
+      "stars": 2,
+      "text": "Wow, another promo code that 'expired' 5 minutes after you emailed it to me. Thanks so much."
+    },
+    {
+      "id": "B1-041",
+      "tag": "mixed",
+      "true_theme": "promo_codes",
+      "stars": 3,
+      "text": "Great food, fast delivery, but the BOGO deal didn't actually take anything off."
+    },
+    {
+      "id": "B1-049",
+      "tag": "mixed",
+      "true_theme": "late_cold",
+      "stars": 3,
+      "text": "Delivery took forever but the driver was super nice and apologized."
+    },
+    {
+      "id": "B2-008",
+      "tag": "mixed",
+      "true_theme": "promo_codes",
+      "stars": 3,
+      "text": "The 20% off code applied this time, but only to the subtotal, not delivery. Fine I guess."
+    },
+    {
+      "id": "B2-009",
+      "tag": "sarcasm",
+      "true_theme": "late_cold",
+      "stars": 2,
+      "text": "Nothing says 'fresh' like room temperature sushi after an hour 😂"
+    },
+    {
+      "id": "B2-014",
+      "tag": "junk",
+      "true_theme": "other",
+      "stars": 1,
+      "text": "asdfgh"
+    },
+    {
+      "id": "B2-016",
+      "tag": "mixed",
+      "true_theme": "checkout_payment",
+      "stars": 3,
+      "text": "Food from Taco Loco was amazing but paying took 3 attempts."
+    },
+    {
+      "id": "B2-019",
+      "tag": "praise_of_fix",
+      "true_theme": "praise",
+      "stars": 5,
+      "text": "Order tracking is SO much better now, I can actually see the driver move!"
+    },
+    {
+      "id": "B2-021",
+      "tag": "mixed",
+      "true_theme": "rating_screen_bug",
+      "stars": 3,
+      "text": "The food is still great, but the rating popup makes me not want to open the app."
+    },
+    {
+      "id": "B2-028",
+      "tag": "mixed",
+      "true_theme": "late_cold",
+      "stars": 3,
+      "text": "Late again, but at least the tracking told me it would be late this time."
+    },
+    {
+      "id": "B2-041",
+      "tag": "special_instructions_signal",
+      "true_theme": "missing_wrong",
+      "stars": 3,
+      "text": "Usually correct, but special instructions get ignored a lot."
+    },
+    {
+      "id": "B2-042",
+      "tag": "rare_urgent",
+      "true_theme": "food_allergy",
+      "stars": null,
+      "text": "I wrote 'severe peanut allergy - no peanuts please' in the order notes for my Thai order. The restaurant told me afterward they never saw any notes. My daughter had an allergic reaction and we had to use her EpiPen. Your special instructions are not reaching restaurants. This could kill someone."
+    },
+    {
+      "id": "B2-043",
+      "tag": "praise_of_fix",
+      "true_theme": "praise",
+      "stars": 4,
+      "text": "Promo worked! First time in months. Saved $8."
+    },
+    {
+      "id": "B2-052",
+      "tag": "sarcasm_high_stars",
+      "true_theme": "rating_screen_bug",
+      "stars": 5,
+      "text": "Love being asked to rate the same pad thai from 2 weeks ago every single time I open the app. Truly, 5 stars."
+    },
+    {
+      "id": "B2-056",
+      "tag": "overlaps_payment",
+      "true_theme": "rating_screen_bug",
+      "stars": null,
+      "text": "I was charged a $5 tip I never selected. It happened on the rating screen after my order. Please refund."
+    }
+  ],
+  "labels": {
+    "B1-001": "order_tracking",
+    "B1-002": "checkout_payment",
+    "B1-003": "checkout_payment",
+    "B1-004": "late_cold",
+    "B1-005": "checkout_payment",
+    "B1-006": "checkout_payment",
+    "B1-007": "checkout_payment",
+    "B1-008": "praise",
+    "B1-009": "order_tracking",
+    "B1-010": "order_tracking",
+    "B1-011": "praise",
+    "B1-012": "praise",
+    "B1-013": "order_tracking",
+    "B1-014": "missing_wrong",
+    "B1-015": "late_cold",
+    "B1-016": "checkout_payment",
+    "B1-017": "promo_codes",
+    "B1-018": "missing_wrong",
+    "B1-019": "order_tracking",
+    "B1-020": "order_tracking",
+    "B1-021": "checkout_payment",
+    "B1-022": "promo_codes",
+    "B1-023": "order_tracking",
+    "B1-024": "promo_codes",
+    "B1-025": "missing_wrong",
+    "B1-026": "other",
+    "B1-027": "missing_wrong",
+    "B1-028": "missing_wrong",
+    "B1-029": "praise",
+    "B1-030": "praise",
+    "B1-031": "praise",
+    "B1-032": "checkout_payment",
+    "B1-033": "promo_codes",
+    "B1-034": "late_cold",
+    "B1-035": "promo_codes",
+    "B1-036": "checkout_payment",
+    "B1-037": "order_tracking",
+    "B1-038": "checkout_payment",
+    "B1-039": "promo_codes",
+    "B1-040": "checkout_payment",
+    "B1-041": "promo_codes",
+    "B1-042": "checkout_payment",
+    "B1-043": "praise",
+    "B1-044": "order_tracking",
+    "B1-045": "promo_codes",
+    "B1-046": "order_tracking",
+    "B1-047": "promo_codes",
+    "B1-048": "promo_codes",
+    "B1-049": "late_cold",
+    "B1-050": "order_tracking",
+    "B1-051": "order_tracking",
+    "B1-052": "order_tracking",
+    "B1-053": "late_cold",
+    "B1-054": "missing_wrong",
+    "B1-055": "late_cold",
+    "B1-056": "late_cold",
+    "B1-057": "other",
+    "B1-058": "late_cold",
+    "B1-059": "praise",
+    "B1-060": "order_tracking",
+    "B2-001": "checkout_payment",
+    "B2-002": "other",
+    "B2-003": "checkout_payment",
+    "B2-004": "missing_wrong",
+    "B2-005": "order_tracking",
+    "B2-006": "checkout_payment",
+    "B2-007": "late_cold",
+    "B2-008": "promo_codes",
+    "B2-009": "late_cold",
+    "B2-010": "checkout_payment",
+    "B2-011": "checkout_payment",
+    "B2-012": "promo_codes",
+    "B2-013": "praise",
+    "B2-014": "other",
+    "B2-015": "rating_screen_bug",
+    "B2-016": "checkout_payment",
+    "B2-017": "missing_wrong",
+    "B2-018": "order_tracking",
+    "B2-019": "praise",
+    "B2-020": "rating_screen_bug",
+    "B2-021": "rating_screen_bug",
+    "B2-022": "checkout_payment",
+    "B2-023": "order_tracking",
+    "B2-024": "rating_screen_bug",
+    "B2-025": "order_tracking",
+    "B2-026": "praise",
+    "B2-027": "late_cold",
+    "B2-028": "late_cold",
+    "B2-029": "late_cold",
+    "B2-030": "order_tracking",
+    "B2-031": "checkout_payment",
+    "B2-032": "promo_codes",
+    "B2-033": "rating_screen_bug",
+    "B2-034": "late_cold",
+    "B2-035": "promo_codes",
+    "B2-036": "rating_screen_bug",
+    "B2-037": "praise",
+    "B2-038": "rating_screen_bug",
+    "B2-039": "rating_screen_bug",
+    "B2-040": "late_cold",
+    "B2-041": "missing_wrong",
+    "B2-042": "food_allergy",
+    "B2-043": "praise",
+    "B2-044": "rating_screen_bug",
+    "B2-045": "checkout_payment",
+    "B2-046": "missing_wrong",
+    "B2-047": "missing_wrong",
+    "B2-048": "praise",
+    "B2-049": "missing_wrong",
+    "B2-050": "praise",
+    "B2-051": "rating_screen_bug",
+    "B2-052": "rating_screen_bug",
+    "B2-053": "checkout_payment",
+    "B2-054": "other",
+    "B2-055": "other",
+    "B2-056": "rating_screen_bug",
+    "B2-057": "rating_screen_bug",
+    "B2-058": "late_cold",
+    "B2-059": "praise",
+    "B2-060": "other"
+  }
+}

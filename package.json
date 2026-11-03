@@ -1,0 +1,29 @@
+{
+  "name": "feedback-insights",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "data": "python3 scripts/make_data.py",
+    "api": "wrangler dev --port 8787",
+    "preview": "vite build && wrangler dev --port 8787",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "dependencies": {
+    "papaparse": "^5.7.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.5",
+    "wrangler": "^4.154.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261023.1": true
+  }
+}

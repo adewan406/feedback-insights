@@ -1,0 +1,61 @@
+id,date,source,text,star_rating
+B1-001,2026-09-01,app_store,Tracking screen showed 'Delivered' while I was still standing at my door waiting. Food arrived 20 min later.,1
+B1-002,2026-09-01,google_play,Checkout makes me re-enter my address every single time even though it's saved.,3
+B1-003,2026-09-01,google_play,"Food was great as always, but checkout froze twice before it went through.",3
+B1-004,2026-09-01,survey,Deliveries during dinner rush are always late.,2
+B1-005,2026-09-02,app_store,Apple Pay button just spins forever.,2
+B1-006,2026-09-03,app_store,"App crashes every time I tap Place Order. Tried 4 times, gave up and used a different app.",1
+B1-007,2026-09-03,survey,"Checkout takes too many screens. Why do I confirm the tip, then the address, then the payment, then confirm again?",2
+B1-008,2026-09-03,google_play,"Love the reorder button, saves me so much time.",5
+B1-009,2026-09-04,google_play,ETA keeps jumping from 10 min to 40 min to 15 min. Just tell me the truth.,2
+B1-010,2026-09-04,support,Tracking has been stuck on 'Restaurant is preparing your order' for an hour. Restaurant says it was picked up 40 min ago. Where is my food?,
+B1-011,2026-09-04,app_store,"Fast, easy, and the food was hot. Best delivery app in town.",5
+B1-012,2026-09-04,app_store,Drivers are always polite. Never had a bad experience.,5
+B1-013,2026-09-05,google_play,"The driver's location on the map is always a few minutes behind, so I go downstairs too early every time.",3
+B1-014,2026-09-05,support,Order #51107 was missing the kids meal. Please refund $8.99.,
+B1-015,2026-09-06,support,My order was over an hour late and the ice cream was melted. I'd like a refund.,
+B1-016,2026-09-07,app_store,Service fee only shows up on the very last screen. Feels sneaky.,2
+B1-017,2026-09-07,app_store,Promo code WELCOME20 says 'not valid' even though it's my first order.,1
+B1-018,2026-09-07,app_store,"Asked for no onions in the instructions, got extra onions.",2
+B1-019,2026-09-08,app_store,"Oh great, the live map is 'live' the way a painting is live. Love it.",3
+B1-020,2026-09-08,survey,Mostly fine but I don't trust the arrival time anymore. It's always off by 15+ minutes.,3
+B1-021,2026-09-08,google_play,"Payment failed, but the order still went through and then got cancelled 10 min later. Confusing.",2
+B1-022,2026-09-08,app_store,Can't find where to enter a promo code on the checkout screen.,3
+B1-023,2026-09-09,support,"Hi, my order #48213 says delivered but I never got it. Tracking showed the driver at a completely different address. Please help.",
+B1-024,2026-09-09,support,Promo code SAVE10 was accepted but my receipt shows full price.,
+B1-025,2026-09-09,google_play,Got someone else's order entirely. Different name on the bag.,1
+B1-026,2026-09-09,app_store,Can you add more vegan options in my area?,4
+B1-027,2026-09-11,app_store,Missing my drink AND the side of guac I paid extra for.,2
+B1-028,2026-09-11,google_play,"Wrong sushi roll, and the report-a-problem screen wouldn't let me upload a photo.",2
+B1-029,2026-09-12,google_play,Clean design and easy to use.,4
+B1-030,2026-09-12,app_store,Got my food in 18 minutes. Impressive.,5
+B1-031,2026-09-13,survey,Great selection of local restaurants I can't find on other apps.,5
+B1-032,2026-09-14,support,My card was declined at checkout but my bank says there was no attempt. Card works everywhere else. Order total was $34.50.,
+B1-033,2026-09-14,survey,The promos look great in the emails but when I try to use them there's always some hidden rule.,2
+B1-034,2026-09-14,google_play,Thanks QuickBite for teaching me patience. 75 minutes for a burrito 👏,4
+B1-035,2026-09-15,google_play,"Got a promo from a friend referral, app says I'm not eligible. Why?",2
+B1-036,2026-09-17,support,I was charged $41.20 for an order that says 'Payment failed' in the app. Please refund.,
+B1-037,2026-09-18,app_store,"5 stars for the order tracking, it's a great work of fiction 🙃",5
+B1-038,2026-09-18,survey,"Love the restaurant selection. Paying is the annoying part, PayPal never works.",3
+B1-039,2026-09-18,app_store,"Wow, another promo code that 'expired' 5 minutes after you emailed it to me. Thanks so much.",2
+B1-040,2026-09-19,google_play,Got charged twice for one order. Took a week to get the refund.,1
+B1-041,2026-09-19,app_store,"Great food, fast delivery, but the BOGO deal didn't actually take anything off.",3
+B1-042,2026-09-20,app_store,"Can't add a new card, the form keeps saying 'invalid zip code' for my real zip code.",1
+B1-043,2026-09-20,google_play,The group order feature made our office lunch so easy.,5
+B1-044,2026-09-21,app_store,The map said my driver was 2 minutes away for 25 minutes. Driver icon just sat frozen on the same street.,2
+B1-045,2026-09-21,support,The 'Free delivery Friday' promo didn't apply to my order. I was charged $4.99 delivery. Can I get that back?,
+B1-046,2026-09-22,survey,Please fix the order status updates. I got 'Out for delivery' after it was already delivered.,2
+B1-047,2026-09-23,google_play,"Applied a promo code, it showed the discount, then at checkout the discount disappeared.",2
+B1-048,2026-09-23,google_play,Promo codes never work for me. 3 tries this month.,1
+B1-049,2026-09-23,app_store,Delivery took forever but the driver was super nice and apologized.,3
+B1-050,2026-09-24,google_play,Order tracking is useless. The dot doesn't move and then suddenly the food is here.,2
+B1-051,2026-09-24,app_store,Tracking page crashes when I open it from the notification.,2
+B1-052,2026-09-24,app_store,"ETA said 6:15, food came 7:05. No update in between.",2
+B1-053,2026-09-25,app_store,"Ordered at 12:10 for my lunch break, got it at 1:15. Lunch break was over.",1
+B1-054,2026-09-25,survey,Items are missing maybe 1 in 5 orders. Usually small stuff like sauces.,3
+B1-055,2026-09-26,app_store,Food arrived 50 minutes late and completely cold.,1
+B1-056,2026-09-26,google_play,"Pizza showed up lukewarm. Not the restaurant's fault, it sat somewhere for a while.",2
+B1-057,2026-09-26,support,How do I change the email on my account?,
+B1-058,2026-09-28,google_play,Fries were soggy and cold. Driver clearly made two other stops first.,2
+B1-059,2026-09-28,survey,Pretty good overall. Prices are a bit high but convenient.,4
+B1-060,2026-09-29,google_play,"Can't see where my driver is at all, the map is just a gray box on my Pixel.",2

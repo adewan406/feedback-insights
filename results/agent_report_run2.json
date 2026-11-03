@@ -1,0 +1,634 @@
+{
+  "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "createdAt": "2026-10-28T05:03:11.534Z",
+  "seconds": 72,
+  "insight": "13 new delivery issues arose",
+  "summary": "Delivery and rating screen problems worsened, while promo code issues improved. We must address delivery, rating screen, and checkout problems. Total feedback remained steady at 60.",
+  "priorities": [
+    {
+      "theme": "delivery_problems",
+      "name": "Delivery Issues",
+      "score": 39,
+      "impact": 2,
+      "trend": "worsening",
+      "why": "It affects 13 customers this month with a 2/3 impact",
+      "fix": "Investigate late arrivals and missing items",
+      "evidence": [
+        "B2-004",
+        "B2-007",
+        "B2-009"
+      ]
+    },
+    {
+      "theme": "rating_screen_problems",
+      "name": "Rating Screen Issues",
+      "score": 19.5,
+      "impact": 1,
+      "trend": "worsening",
+      "why": "It frustrates 13 customers this month with a 1/3 impact",
+      "fix": "Fix the rating popup bug",
+      "evidence": [
+        "B2-015",
+        "B2-020",
+        "B2-021"
+      ]
+    },
+    {
+      "theme": "checkout_issues",
+      "name": "Checkout Problems",
+      "score": 18,
+      "impact": 3,
+      "trend": "new",
+      "why": "It blocks 4 customers this month with a 3/3 impact",
+      "fix": "Resolve payment failures and crashes",
+      "evidence": [
+        "B2-001",
+        "B2-003",
+        "B2-006"
+      ]
+    }
+  ],
+  "urgent": [
+    {
+      "id": "B2-042",
+      "urgent": true,
+      "reason": "The customer's daughter had a severe allergic reaction due to the special instructions not being communicated to the restaurant, posing a risk to her health and safety.",
+      "action": "Investigate the issue with the order notes system to determine why the special instructions were not received by the restaurant.",
+      "text": "I wrote 'severe peanut allergy - no peanuts please' in the order notes for my Thai order. The restaurant told me afterward they never saw any notes. My daughter had an allergic reaction and we had to use her EpiPen. Your special instructions are not reaching restaurants. This could kill someone."
+    }
+  ],
+  "themes": [
+    {
+      "id": "praise",
+      "name": "Good Experience",
+      "description": "Feedback that praises the app or service without mentioning a problem.",
+      "thisMonth": 8,
+      "lastMonth": 5,
+      "negativeThisMonth": 0,
+      "trend": "worsening",
+      "score": 0
+    },
+    {
+      "id": "other",
+      "name": "Feature Requests",
+      "description": "Feedback that includes feature requests, questions, or spam that doesn't fit into other themes.",
+      "thisMonth": 6,
+      "lastMonth": 22,
+      "negativeThisMonth": 2,
+      "trend": "improving",
+      "score": 0
+    },
+    {
+      "id": "checkout_issues",
+      "name": "Checkout Problems",
+      "description": "Feedback about issues that occur during the checkout process, such as crashes, freezes, or payment failures.",
+      "thisMonth": 4,
+      "lastMonth": 0,
+      "negativeThisMonth": 2,
+      "trend": "new",
+      "score": 18
+    },
+    {
+      "id": "order_tracking_problems",
+      "name": "Tracking Issues",
+      "description": "Feedback about problems with order tracking, including inaccurate estimates, frozen maps, or missing updates.",
+      "thisMonth": 5,
+      "lastMonth": 7,
+      "negativeThisMonth": 2,
+      "trend": "stable",
+      "score": 5
+    },
+    {
+      "id": "rating_screen_problems",
+      "name": "Rating Screen Issues",
+      "description": "Feedback about issues with the rating screen, including freezes, incorrect ratings, or annoying prompts.",
+      "thisMonth": 13,
+      "lastMonth": 2,
+      "negativeThisMonth": 13,
+      "trend": "worsening",
+      "score": 19.5
+    },
+    {
+      "id": "promo_code_problems",
+      "name": "Promo Code Issues",
+      "description": "Feedback about problems with promo codes, including codes not applying, expiring too quickly, or having hidden rules.",
+      "thisMonth": 3,
+      "lastMonth": 9,
+      "negativeThisMonth": 2,
+      "trend": "improving",
+      "score": 3
+    },
+    {
+      "id": "delivery_problems",
+      "name": "Delivery Issues",
+      "description": "Feedback about problems with deliveries, including late arrivals, cold food, or missing items.",
+      "thisMonth": 13,
+      "lastMonth": 9,
+      "negativeThisMonth": 12,
+      "trend": "worsening",
+      "score": 39
+    },
+    {
+      "id": "payment_problems",
+      "name": "Payment Issues",
+      "description": "Feedback about problems with payments, including being charged twice, incorrect charges, or declined cards.",
+      "thisMonth": 6,
+      "lastMonth": 6,
+      "negativeThisMonth": 4,
+      "trend": "stable",
+      "score": 18
+    },
+    {
+      "id": "special_instructions_problems",
+      "name": "Special Instructions Issues",
+      "description": "Feedback about problems with special instructions, including ignored requests or notes not being sent to restaurants.",
+      "thisMonth": 2,
+      "lastMonth": 0,
+      "negativeThisMonth": 2,
+      "trend": "new",
+      "score": 6
+    }
+  ],
+  "labels": {
+    "B1-001": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-002": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-003": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-004": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-005": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-006": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-007": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-008": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-009": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-010": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-011": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-012": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-013": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-014": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-015": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-016": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-017": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-018": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-019": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-020": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-021": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B1-022": {
+      "theme": "promo_code_problems",
+      "sentiment": "neutral"
+    },
+    "B1-023": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B1-024": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-025": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-026": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-027": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-028": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B1-029": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-030": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-031": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-032": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B1-033": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-034": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-035": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-036": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B1-037": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B1-038": {
+      "theme": "payment_problems",
+      "sentiment": "neutral"
+    },
+    "B1-039": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-040": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B1-041": {
+      "theme": "promo_code_problems",
+      "sentiment": "neutral"
+    },
+    "B1-042": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B1-043": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-044": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B1-045": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-046": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B1-047": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-048": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B1-049": {
+      "theme": "delivery_problems",
+      "sentiment": "neutral"
+    },
+    "B1-050": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B1-051": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B1-052": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B1-053": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-054": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-055": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-056": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-057": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-058": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B1-059": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-060": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B2-001": {
+      "theme": "checkout_issues",
+      "sentiment": "neutral"
+    },
+    "B2-002": {
+      "theme": "other",
+      "sentiment": "positive"
+    },
+    "B2-003": {
+      "theme": "checkout_issues",
+      "sentiment": "neutral"
+    },
+    "B2-004": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-005": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B2-006": {
+      "theme": "checkout_issues",
+      "sentiment": "negative"
+    },
+    "B2-007": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-008": {
+      "theme": "promo_code_problems",
+      "sentiment": "neutral"
+    },
+    "B2-009": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-010": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B2-011": {
+      "theme": "payment_problems",
+      "sentiment": "neutral"
+    },
+    "B2-012": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B2-013": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-014": {
+      "theme": "other",
+      "sentiment": "negative"
+    },
+    "B2-015": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-016": {
+      "theme": "payment_problems",
+      "sentiment": "neutral"
+    },
+    "B2-017": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-018": {
+      "theme": "order_tracking_problems",
+      "sentiment": "neutral"
+    },
+    "B2-019": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-020": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-021": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-022": {
+      "theme": "checkout_issues",
+      "sentiment": "negative"
+    },
+    "B2-023": {
+      "theme": "order_tracking_problems",
+      "sentiment": "neutral"
+    },
+    "B2-024": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-025": {
+      "theme": "order_tracking_problems",
+      "sentiment": "negative"
+    },
+    "B2-026": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-027": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-028": {
+      "theme": "delivery_problems",
+      "sentiment": "neutral"
+    },
+    "B2-029": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-030": {
+      "theme": "order_tracking_problems",
+      "sentiment": "neutral"
+    },
+    "B2-031": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B2-032": {
+      "theme": "promo_code_problems",
+      "sentiment": "negative"
+    },
+    "B2-033": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-034": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-035": {
+      "theme": "other",
+      "sentiment": "negative"
+    },
+    "B2-036": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-037": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-038": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-039": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-040": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-041": {
+      "theme": "special_instructions_problems",
+      "sentiment": "negative"
+    },
+    "B2-042": {
+      "theme": "special_instructions_problems",
+      "sentiment": "negative"
+    },
+    "B2-043": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-044": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-045": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B2-046": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-047": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-048": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-049": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-050": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-051": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-052": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-053": {
+      "theme": "payment_problems",
+      "sentiment": "negative"
+    },
+    "B2-054": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B2-055": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B2-056": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-057": {
+      "theme": "rating_screen_problems",
+      "sentiment": "negative"
+    },
+    "B2-058": {
+      "theme": "delivery_problems",
+      "sentiment": "negative"
+    },
+    "B2-059": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-060": {
+      "theme": "other",
+      "sentiment": "neutral"
+    }
+  }
+}

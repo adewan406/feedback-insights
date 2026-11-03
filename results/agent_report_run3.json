@@ -1,0 +1,634 @@
+{
+  "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "createdAt": "2026-10-28T05:06:00.343Z",
+  "seconds": 53,
+  "insight": "Rating Screen jumped from 1 to 12 complaints.",
+  "summary": "Checkout and delivery issues persist, while rating screen problems emerged with 12 new complaints. Tracking issues improved from 12 to 5 complaints. The product team should prioritize these areas for improvement.",
+  "priorities": [
+    {
+      "theme": "checkout",
+      "name": "Checkout Issues",
+      "score": 27,
+      "impact": 3,
+      "trend": "stable",
+      "why": "It affects 9 customers this month with a high impact of 3/3.",
+      "fix": "Investigate and resolve the payment failure issue",
+      "evidence": [
+        "B2-001",
+        "B2-006",
+        "B2-010"
+      ]
+    },
+    {
+      "theme": "delivery",
+      "name": "Delivery Issues",
+      "score": 26,
+      "impact": 2,
+      "trend": "stable",
+      "why": "It affects 13 customers this month with a medium impact of 2/3.",
+      "fix": "Improve the delivery tracking system to reduce late or missing items",
+      "evidence": [
+        "B2-004",
+        "B2-007",
+        "B2-017"
+      ]
+    },
+    {
+      "theme": "rating_screen",
+      "name": "Rating Screen",
+      "score": 18,
+      "impact": 1,
+      "trend": "new",
+      "why": "It affects 12 customers this month with a low impact of 1/3, but is a new issue.",
+      "fix": "Fix the rating screen freeze and incorrect ratings issue",
+      "evidence": [
+        "B2-015",
+        "B2-020",
+        "B2-021"
+      ]
+    }
+  ],
+  "urgent": [
+    {
+      "id": "B2-042",
+      "urgent": true,
+      "reason": "The customer's daughter had a severe allergic reaction due to the special instructions not being communicated to the restaurant, posing a risk to her health and safety.",
+      "action": "Investigate the issue with the order notes system to determine why the special instructions were not received by the restaurant.",
+      "text": "I wrote 'severe peanut allergy - no peanuts please' in the order notes for my Thai order. The restaurant told me afterward they never saw any notes. My daughter had an allergic reaction and we had to use her EpiPen. Your special instructions are not reaching restaurants. This could kill someone."
+    }
+  ],
+  "themes": [
+    {
+      "id": "checkout",
+      "name": "Checkout Issues",
+      "description": "Problems that occur during the checkout process, including payment failures and crashes.",
+      "thisMonth": 9,
+      "lastMonth": 11,
+      "negativeThisMonth": 4,
+      "trend": "stable",
+      "score": 27
+    },
+    {
+      "id": "order_tracking",
+      "name": "Tracking Issues",
+      "description": "Problems with the order tracking feature, including inaccurate or stuck tracking.",
+      "thisMonth": 5,
+      "lastMonth": 12,
+      "negativeThisMonth": 2,
+      "trend": "improving",
+      "score": 5
+    },
+    {
+      "id": "rating_screen",
+      "name": "Rating Screen",
+      "description": "Issues with the rating screen, including freezes, incorrect ratings, and annoying prompts.",
+      "thisMonth": 12,
+      "lastMonth": 1,
+      "negativeThisMonth": 12,
+      "trend": "new",
+      "score": 18
+    },
+    {
+      "id": "promo_codes",
+      "name": "Promo Code Issues",
+      "description": "Problems with promo codes, including codes not applying or expiring too quickly.",
+      "thisMonth": 3,
+      "lastMonth": 10,
+      "negativeThisMonth": 2,
+      "trend": "improving",
+      "score": 3
+    },
+    {
+      "id": "delivery",
+      "name": "Delivery Issues",
+      "description": "Problems with the delivery process, including late or cold food, and missing or incorrect items.",
+      "thisMonth": 13,
+      "lastMonth": 14,
+      "negativeThisMonth": 12,
+      "trend": "stable",
+      "score": 26
+    },
+    {
+      "id": "praise",
+      "name": "Positive Feedback",
+      "description": "Compliments and positive feedback about the app or service.",
+      "thisMonth": 8,
+      "lastMonth": 8,
+      "negativeThisMonth": 0,
+      "trend": "stable",
+      "score": 0
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "description": "Feature requests, questions, spam, or feedback that doesn't fit into another theme.",
+      "thisMonth": 4,
+      "lastMonth": 1,
+      "negativeThisMonth": 1,
+      "trend": "new",
+      "score": 0
+    },
+    {
+      "id": "account_management",
+      "name": "Account Issues",
+      "description": "Problems with managing user accounts, including issues with tips, refunds, and account settings.",
+      "thisMonth": 4,
+      "lastMonth": 2,
+      "negativeThisMonth": 3,
+      "trend": "worsening",
+      "score": 18
+    },
+    {
+      "id": "restaurant_communication",
+      "name": "Restaurant Communication",
+      "description": "Issues with communication between the app and restaurants, including special instructions not being received.",
+      "thisMonth": 2,
+      "lastMonth": 1,
+      "negativeThisMonth": 1,
+      "trend": "worsening",
+      "score": 9
+    }
+  ],
+  "labels": {
+    "B1-001": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-002": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-003": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B1-004": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-005": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-006": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-007": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-008": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-009": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-010": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-011": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-012": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-013": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-014": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-015": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-016": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-017": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-018": {
+      "theme": "restaurant_communication",
+      "sentiment": "negative"
+    },
+    "B1-019": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B1-020": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-021": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-022": {
+      "theme": "promo_codes",
+      "sentiment": "neutral"
+    },
+    "B1-023": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-024": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-025": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-026": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B1-027": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-028": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-029": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-030": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-031": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-032": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-033": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-034": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-035": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-036": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-037": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-038": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B1-039": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-040": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B1-041": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-042": {
+      "theme": "account_management",
+      "sentiment": "negative"
+    },
+    "B1-043": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-044": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-045": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-046": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-047": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-048": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B1-049": {
+      "theme": "delivery",
+      "sentiment": "neutral"
+    },
+    "B1-050": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-051": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B1-052": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-053": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-054": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-055": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-056": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-057": {
+      "theme": "account_management",
+      "sentiment": "neutral"
+    },
+    "B1-058": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B1-059": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B1-060": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B2-001": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B2-002": {
+      "theme": "other",
+      "sentiment": "positive"
+    },
+    "B2-003": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B2-004": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-005": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B2-006": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B2-007": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-008": {
+      "theme": "promo_codes",
+      "sentiment": "neutral"
+    },
+    "B2-009": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-010": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B2-011": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B2-012": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B2-013": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-014": {
+      "theme": "other",
+      "sentiment": "negative"
+    },
+    "B2-015": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-016": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B2-017": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-018": {
+      "theme": "order_tracking",
+      "sentiment": "neutral"
+    },
+    "B2-019": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-020": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-021": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-022": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B2-023": {
+      "theme": "order_tracking",
+      "sentiment": "neutral"
+    },
+    "B2-024": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-025": {
+      "theme": "order_tracking",
+      "sentiment": "negative"
+    },
+    "B2-026": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-027": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-028": {
+      "theme": "delivery",
+      "sentiment": "neutral"
+    },
+    "B2-029": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-030": {
+      "theme": "order_tracking",
+      "sentiment": "neutral"
+    },
+    "B2-031": {
+      "theme": "account_management",
+      "sentiment": "negative"
+    },
+    "B2-032": {
+      "theme": "promo_codes",
+      "sentiment": "negative"
+    },
+    "B2-033": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-034": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-035": {
+      "theme": "account_management",
+      "sentiment": "negative"
+    },
+    "B2-036": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-037": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-038": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-039": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-040": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-041": {
+      "theme": "restaurant_communication",
+      "sentiment": "neutral"
+    },
+    "B2-042": {
+      "theme": "restaurant_communication",
+      "sentiment": "negative"
+    },
+    "B2-043": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-044": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-045": {
+      "theme": "checkout",
+      "sentiment": "negative"
+    },
+    "B2-046": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-047": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-048": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-049": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-050": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-051": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-052": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-053": {
+      "theme": "checkout",
+      "sentiment": "neutral"
+    },
+    "B2-054": {
+      "theme": "other",
+      "sentiment": "neutral"
+    },
+    "B2-055": {
+      "theme": "account_management",
+      "sentiment": "neutral"
+    },
+    "B2-056": {
+      "theme": "account_management",
+      "sentiment": "negative"
+    },
+    "B2-057": {
+      "theme": "rating_screen",
+      "sentiment": "negative"
+    },
+    "B2-058": {
+      "theme": "delivery",
+      "sentiment": "negative"
+    },
+    "B2-059": {
+      "theme": "praise",
+      "sentiment": "positive"
+    },
+    "B2-060": {
+      "theme": "other",
+      "sentiment": "neutral"
+    }
+  }
+}
